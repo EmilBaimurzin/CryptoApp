@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigatin"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        tools:layout="@layout/fragment_main"
+        android:name="com.currency.crypto.ui.main.FragmentMain"
+        android:label="FragmentMain" >
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentMain_to_fragmentSelection"
+            app:destination="@id/fragmentSelection" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_selection"
+        android:id="@+id/fragmentSelection"
+        android:name="com.currency.crypto.ui.pages.FragmentSelection"
+        android:label="FragmentSelection" >
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentSelection_to_fragmentIntroduction"
+            app:destination="@id/fragmentIntroduction" />
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentSelection_to_fragmentTechnicalAnalysis"
+            app:destination="@id/fragmentTechnicalAnalysis" />
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentSelection_to_fragmentCrypto"
+            app:destination="@id/fragmentCrypto" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_introduction"
+        android:id="@+id/fragmentIntroduction"
+        android:name="com.currency.crypto.ui.pages.intriduction.FragmentIntroduction"
+        android:label="FragmentIntroduction" >
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentIntroduction_to_fragmentIntroductionBasics"
+            app:destination="@id/fragmentIntroductionBasics" />
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentIntroduction_to_fragmentIntroductionAdvance"
+            app:destination="@id/fragmentIntroductionAdvance" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_introduction_basics"
+        android:id="@+id/fragmentIntroductionBasics"
+        android:name="com.currency.crypto.ui.pages.intriduction.FragmentIntroductionBasics"
+        android:label="FragmentIntroductionBasics" />
+    <fragment
+        tools:layout="@layout/fragment_introduction_advance"
+        android:id="@+id/fragmentIntroductionAdvance"
+        android:name="com.currency.crypto.ui.pages.intriduction.FragmentIntroductionAdvance"
+        android:label="FragmentIntroductionAdvance" />
+    <fragment
+        tools:layout="@layout/fragment_technical_analysis"
+        android:id="@+id/fragmentTechnicalAnalysis"
+        android:name="com.currency.crypto.ui.pages.technical_analysis.FragmentTechnicalAnalysis"
+        android:label="FragmentTechnicalAnalysis" >
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentTechnicalAnalysis_to_fragmentFundamentals"
+            app:destination="@id/fragmentFundamentals" />
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentTechnicalAnalysis_to_fragmentSimpleIndicators"
+            app:destination="@id/fragmentSimpleIndicators" />
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentTechnicalAnalysis_to_fragmentConcept"
+            app:destination="@id/fragmentConcept" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_fundamentals"
+        android:id="@+id/fragmentFundamentals"
+        android:name="com.currency.crypto.ui.pages.technical_analysis.FragmentFundamentals"
+        android:label="FragmentFundamentals" />
+    <fragment
+        tools:layout="@layout/fragment_simple_indicators"
+        android:id="@+id/fragmentSimpleIndicators"
+        android:name="com.currency.crypto.ui.pages.technical_analysis.FragmentSimpleIndicators"
+        android:label="FragmentSimpleIndicators" />
+    <fragment
+        tools:layout="@layout/fragment_crypto"
+        android:id="@+id/fragmentCrypto"
+        android:name="com.currency.crypto.ui.pages.crypto.FragmentCrypto"
+        android:label="FragmentCrypto" >
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentCrypto_to_fragmentBasicInfo"
+            app:destination="@id/fragmentBasicInfo" />
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentCrypto_to_fragmentOverview"
+            app:destination="@id/fragmentOverview" />
+        <action
+            app:enterAnim="@anim/enter_animation"
+            app:exitAnim="@anim/exit_animation"
+            app:popEnterAnim="@anim/pop_enter_animation"
+            app:popExitAnim="@anim/pop_exit_animation"
+            android:id="@+id/action_fragmentCrypto_to_fragmentSecurity"
+            app:destination="@id/fragmentSecurity" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_concept"
+        android:id="@+id/fragmentConcept"
+        android:name="com.currency.crypto.ui.pages.technical_analysis.FragmentConcept"
+        android:label="FragmentConcept" />
+    <fragment
+        tools:layout="@layout/fragment_basic_info"
+        android:id="@+id/fragmentBasicInfo"
+        android:name="com.currency.crypto.ui.pages.crypto.FragmentBasicInfo"
+        android:label="FragmentBasicInfo" />
+    <fragment
+        tools:layout="@layout/fragment_overview"
+        android:id="@+id/fragmentOverview"
+        android:name="com.currency.crypto.ui.pages.crypto.FragmentOverview"
+        android:label="FragmentOverview" />
+    <fragment
+        tools:layout="@layout/fragment_security"
+        android:id="@+id/fragmentSecurity"
+        android:name="com.currency.crypto.ui.pages.crypto.FragmentSecurity"
+        android:label="FragmentSecurity" />
+</navigation>
